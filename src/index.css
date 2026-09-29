@@ -1,0 +1,167 @@
+:root {
+  /* RETRO 7/11 CAFE Color Palette */
+  --retro-dark: #160c09;
+  --retro-dark-surface: #221512;
+  --electric-blue: #0088e8;
+  --electric-blue-hover: #0072c4;
+  --charcoal: #2b2625;
+  --oat-beige: #E6DBCF;
+  --olive-green: #84966B;
+  --copper: #B57F50;
+  --copper-hover: #9c673b;
+  --copper-light: #c89669;
+  --concrete: #A9A9A9;
+  --concrete-dark: #7a7a7a;
+  --concrete-light: #d8d8d8;
+  --off-white: #F7F5F0;
+  --dark-overlay: rgba(22, 12, 9, 0.65);
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--oat-beige);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--oat-beige);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Custom Buttons matching Global Styles */
+.btn-primary {
+  background-color: var(--olive-green);
+  color: var(--off-white);
+  border: 1px solid var(--olive-green);
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--copper);
+  border-color: var(--copper);
+  color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(181, 127, 80, 0.3);
+}
+
+.btn-story {
+  background: linear-gradient(135deg, var(--copper), #a06a3d);
+  color: var(--off-white);
+  border: 1px solid rgba(247, 245, 240, 0.3);
+  padding: 0.85rem 2.2rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 50px; /* Rounded profile as per spec */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+}
+
+.btn-story:hover {
+  background: linear-gradient(135deg, #c48c5d, var(--copper));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 25px rgba(181, 127, 80, 0.45);
+  color: var(--off-white);
+}
+
+.btn-outline-concrete {
+  background-color: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-outline-concrete:hover {
+  background-color: var(--charcoal);
+  color: var(--off-white);
+}
+
+/* Concrete Texture Background Utility */
+.bg-concrete-textured {
+  background-color: var(--concrete);
+  background-image: radial-gradient(rgba(53, 53, 53, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--oat-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--copper);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--olive-green);
+}
+
+/* Fade in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Section Dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--concrete), transparent);
+  width: 80%;
+  margin: 0 auto;
+}
